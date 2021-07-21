@@ -1,0 +1,16 @@
+from pyrogram import Client
+from pyrogram.handlers import MessageHandler
+
+api_id = 6766845
+api_hash = "25db9298b5add501ced445e6328ab7e0"
+
+app = Client("minha_conta")
+
+
+def dump(client, message):
+    print(message)
+
+
+app.add_handler(MessageHandler(dump))
+
+app.run()
